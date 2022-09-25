@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delete an Option</title>
+  </head>
+  <body>
+    <select name="colors" id="colors">
+      <option value="red">Red</option>
+      <option value="yellow">Yellow</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="pink">Pink</option>
+    </select>
+    <button type="button">Delete</button>
+    <script>
+      const select = document.getElementById("colors");
+      const button = document.getElementsByTagName("button")[0];
+      button.addEventListener("click", () => {
+        let index = select.selectedIndex;
+        select.removeChild(select.options[index]);
+      });
+    </script>
+  </body>
+</html>
